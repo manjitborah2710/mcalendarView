@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CalendarView</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    
+    <style type="text/css">
+        .code{
+            background-color: black;
+        }
+    </style>
+    
+    
+    
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>CustomCalendarView</h1>
+            <a href="https://github.com/manjitborah2710/custom-calendar-view" class="btn btn-primary btn-sm" target="_blank">View on github</a>
+            <a href="https://github.com/manjitborah2710/custom-calendar-view/releases" class="btn btn-secondary btn-sm" target="_blank">Releases</a>
+            <div class="clearfix"></div>
+            <br>
+            <small><kbd>Manjit Borah</kbd></small>
+        </div>
+        <div class="container">
+            <h4>Add custom calendar to your android project : </h4>
+            
+            <h5 class="alert alert-info">1. Add this to your <b>project-level</b> gradle file</h5>
+            <div class="card card-body code">
+                <code>
+                    allprojects {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;repositories {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;maven { url 'https://jitpack.io' }<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                    }<br>
+                </code>
+            </div>
+            <br>
+            <h5 class="alert alert-info">2. Add this to your <b>app-level</b> gradle file</h5>
+            <div class="card card-body code">
+                <Code>
+                    dependencies {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;implementation 'com.github.manjitborah2710:calendar-view:1.0'<br>
+                    }<br>
+                </Code>
+            </div>
+            <br>
+            <hr>
+            
+        </div>
+    </div>
+</body>
+</html>

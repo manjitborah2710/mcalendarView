@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<TextView android:padding="5sp"
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+    android:text="here"
+    android:gravity="center"
+    android:textStyle="bold"
+    android:id="@+id/tv_inside"
+    xmlns:android="http://schemas.android.com/apk/res/android" />
