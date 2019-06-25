@@ -153,6 +153,9 @@ public class CustomCalendarView extends LinearLayout {
     }
 
     public void setCalendar(Calendar calendar){
+        if(getCurrentActualCalendar().get(Calendar.MONTH)!=calendar.get(Calendar.MONTH)){
+            show_current_month.setVisibility(VISIBLE);
+        }
         Calendar currentCalendar=calendar;
 
         Calendar calendarTemp= (Calendar) currentCalendar.clone();
