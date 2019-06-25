@@ -10,6 +10,7 @@
         .code{
             background-color: black;
         }
+	
     </style>
     
     
@@ -25,7 +26,7 @@
             <br>
             <small><kbd>Manjit Borah</kbd></small>
         </div>
-        <div class="container">
+        <div>
             <h4>Add custom calendar to your android project : </h4>
             
             <h5 class="alert alert-info">1. Add this to your <b>project-level</b> gradle file</h5>
@@ -52,6 +53,151 @@
             <hr>
             
         </div>
+		
+		<img src="Capture.png" class="float-right">
+		<h3><u>Mark Dates</u></h3>
+		
+		<div class="card card-body">
+			<p>...</p>
+				<b>customCalendarView.setOnDateClickedListener(new AdapterView.OnItemClickListener() {<br>
+				&nbsp&nbsp&nbsp&nbsp@Override<br>
+				&nbsp&nbsp&nbsp&nbsppublic void onItemClick(AdapterView<?> parent, View view, int position, long id){<br>
+					&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp customCalendarView.markDate(view,position);<br>
+				&nbsp&nbsp&nbsp&nbsp}<br>
+			});</b>
+			<p>...</p>
+        </div>
+		<h3><u>Set Maximum and Minimum Dates</u></h3>
+		<div class="card card-body">
+			<p>...</p>
+				<b>	customCalendarView.setMinDate(calendarMin);<br>
+					customCalendarView.setMaxDate(calendarMax);<br>
+					customCalendarView.setCalendar(customCalendarView.getCurrentDisplayableCalendar());</b>
+			<p>...</p>
+        </div>
+		
+		
+		
+        
+        
     </div>
+	<table class="table table-hover table-responsive">
+		<thead class="thead-light">
+			<tr>
+				<th class="text-center">Method</th>
+				<th><center>Parameters<center></th>
+				<th><center>Return Value<center></th>
+				<th><center>Description<center></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><b>getCurrentActualCalendar()</b></td>
+				<td></td>
+				<td><b>Calendar</b></td>
+				<td>Returns the Calendar instance at the time of method call</td>
+			</tr>
+			<tr>
+				<td><b>getCurrentActualCalendar(String pattern)</b></td>
+				<td><b>pattern:</b> The pattern in the form of which the returned date is formatted</td>
+				<td><b>String</b></td>
+				<td>Returns a String value of the current date in the form of pattern</td>
+			</tr>
+			<tr>
+				<td><b>getCurrentDisplayableCalendar()</b></td>
+				<td></td>
+				<td><b>Calendar</b></td>
+				<td>Returns the Calendar instance which is being applied to the <i>CalendarView</i> at the time of method call</td>
+			</tr>
+			<tr>
+				<td><b>getCurrentDisplayableCalendar(String pattern)</b></td>
+				<td><b>pattern:</b> The pattern in the form of which the returned date is formatted</td>
+				<td><b>String</b></td>
+				<td>Returns a String value of the current displayed calendar in the form of pattern</td>
+			</tr>
+			<tr>
+				<td><b>getMarkedDates()</b></td>
+				<td></td>
+				<td><b>List<Date></b></td>
+				<td>Returns the list of the dates marked</td>
+			</tr>
+			<tr>
+				<td><b>getMarkedDatesStringList()</b></td>
+				<td></td>
+				<td><b>List<String></b></td>
+				<td>Returns the list of the marked dates formatted as String</td>
+			</tr>
+			<tr>
+				<td><b>getDate(int pos)</b></td>
+				<td><b>pos</b>: The position in the <i>CalendarView</i> of which the date is to be returned</td>
+				<td><b>Date</b></td>
+				<td>Returns the Date at the position pos of the <i>CalendarView</i></td>
+			</tr>
+			<tr>
+				<td><b>setCalendar()</b></td>
+				<td></td>
+				<td><b>void</b></td>
+				<td>Sets the <i>CalendarView</i> to the actual Current date calendar. Internally calls <b>setCurrentDisplayableCalendar(Calendar calendar)</b></td>
+			</tr>
+			<tr>
+				<td><b>setCalendar(Calendar calendar)</b></td>
+				<td><b>calendar:</b> the calendar which is to be set to the <i>CalendarView</i></td>
+				<td><b>void </b></td>
+				<td>Sets the  <i>CalendarView</i> to the calendar passed as calendar. Internally calls <b>setCurrentDisplayableCalendar(Calendar calendar)</b></td>
+			</tr>
+			<tr>
+				<td><b>setCurrentDisplayableCalendar(Calendar calendar)</b></td>
+				<td><b>calendar:</b> the calendar which is to be set to the currentDisplayableCalendar variable.</td>
+				<td><b>void </b></td>
+				<td>Sets the variable <b>currentDisplayableCalendar</b> to the value passed as calendar. It does not bring about any changes, it just sets the mentioned variable.</td>
+			</tr>
+			<tr>
+				<td><b>setMaxDate(Calendar calendar)</b></td>
+				<td><b>calendar</b>: the calendar object which describes the maximum date to be enabled in the <i>CalendarView</i></td>
+				<td><b>void</b></td>
+				<td>Sets the maximum date in the <i>CalendarView</i></td>
+			</tr>
+			<tr>
+				<td><b>setMinDate(Calendar calendar)</b></td>
+				<td><b>calendar:</b> the calendar object which describes the minimum date to be enabled in the <i>CalendarView</i></td>
+				<td><b>void</b></td>
+				<td>Sets the minimum date in the <i>CalendarView</i></td>
+			</tr>
+			<tr>
+				<td><b>setOnlySpecifiedMonth(Calendar calendar)</b></td>
+				<td><b>calendar:</b> the calendar object which describes the month enabled in the <i>CalendarView</i></td>
+				<td><b>void</b></td>
+				<td>Sets the month to be displayable in the <i>CalendarView</i>. Disables the previous and next buttons in the <i>CalendarView</i></td>
+			</tr>
+			<tr>
+				<td><b>setOnDateClickedListener(AdapterView.OnItemClickListener listener)</b></td>
+				<td><b>listener:</b> an object of a class implementing AdapterView.OnItemClickListener</td>
+				<td><b>void</b></td>
+				<td>Attaches a listener that overrides the method:<br> public void onItemClick(AdapterView<?> parent, View view, int position, long id);</td>
+			</tr>
+			<tr>
+				<td><b>markDate(View view,int pos)</b></td>
+				<td><b>view:</b> the view passed with the callback onItemClick(…)<br><b>pos:</b> the position passed with the callback onItemClick(…)</td>
+				<td><b>void</b></td>
+				<td>Marks the clicked date on the <i>CalendarView</i>.</td>
+			</tr>
+			<tr>
+				<td><b>markDates(List<Date> dates)</b></td>
+				<td><b>dates:</b> a list of Date objects which are to be marked on the <i>CalendarView</i></td>
+				<td><b>void</b></td>
+				<td>Marks the dates specified in the list dates</td>
+			</tr>
+			<tr>
+				<td><b>unmarkDate(View view,int pos)</b></td>
+				<td><b>view:</b> the view passed with the callback onItemClick(…)<br><b>pos:</b> the position passed with the callback onItemClick(…)</td>
+				<td><b>void</b></td>
+				<td>Unmarks the clicked date on the <i>CalendarView</i>.</td>
+			</tr>
+
+
+
+		</tbody>
+	</table>
+		
 </body>
 </html>
